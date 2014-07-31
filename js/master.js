@@ -13,6 +13,7 @@
         accessToken: "2887486.467ede5.66bfc20c7d8e4f0dae27082834d9e698",
         sortBy: 'most-recent',
         links: true,
+        template: '      <div id="{{id}}" class="instagram_container">        <div id="{{id}}">          <a href="{{link}}" target="_blank" title="{{caption}} by @{{model.user.username}}" >            <img src="{{image}}" alt="{{caption}} by @{{model.user.username}}" class="instagram_image" />          </a>        </div>        <div class="instagram_image_meta">          <div class="likes instagram_image_meta_item">            <p>              <a class="icon-heart" href="{{link}}" target="_blank" title="{{caption}}" >                {{likes}}               </a>            </p>          </div>          <div class="comments instagram_image_meta_item">            <p>              <a class="icon-bubble" href="{{link}}" target="_blank" title="{{caption}}" >                {{comments}}               </a>            </p>          </div>          <div class="owner instagram_image_meta_item">            <p>              <a href="http://instagram.com/{{model.user.username}}" target="_blank" title="{{model.user.full_name}}" >                <img src="{{model.user.profile_picture}}" class="owner_profile_picture" />                {{model.user.full_name}}              </a>            </p>          </div>          <div class="caption instagram_image_meta_item">            <p>              {{caption}}            </p>          </div>        </div>      </div>    ',
         mock: false,
         useHttp: false
       };

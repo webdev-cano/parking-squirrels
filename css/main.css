@@ -3,6 +3,26 @@
 	margin: 										0 auto;
 	width: 											100%;
 }
+.instagram_container{
+	max-width: 200px;
+	display: inline-block;
+	border: 1px solid #56a0d3;
+	height: 350px;
+	overflow: hidden;
+	margin-right: 15px;
+	-moz-box-shadow: 0 0 5px #000000;
+	box-shadow: 0 0 2px #000000;
+}
+.instagram_container a{
+	text-align: center;
+}
+a img.instagram_image{
+	display: block;
+	margin: 0 auto;
+}
+a img.owner_profile_picture{
+	width: 50px !important;
+}
 body{
 	font-family: 								Helvetica Neue;
 	font-weight: 								lighter;
@@ -13,6 +33,7 @@ body{
 	background-color: 					#fff;
 	width: 											100%;
 	border-bottom: 							1px solid #333;
+	z-index: 10;
 }
 
 /* Banner */
@@ -106,6 +127,7 @@ a.second_button{
 /*Tabs*/
 .r-tabs {
 	position: relative;
+	z-index: 1;
 }
 
 .r-tabs .r-tabs-nav {
