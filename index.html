@@ -18,14 +18,14 @@
 	<link rel="stylesheet" href="http://builtbyhq.com/menu/css/reset.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/reveal.css">
-	<link rel="stylesheet" href="css/tabulous.css">
+	<link rel="stylesheet" href="css/responsive-tabs.css">
 	
 	<!-- js  -->
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	<script src="js/reveal/jquery.reveal.js" type="text/javascript"></script>
 	<script src="http://stickyjs.com/jquery.sticky.js" type="text/javascript"></script>
 	<script src="js/master.js"></script>
-	<script src="js/tabulous.js"></script>
+	<script src="js/jquery.responsiveTabs.js"></script>
 	<script type="text/javascript">
 	  $(window).load(function(){
 	    $(".top_nav").sticky({topSpacing:0});
@@ -37,15 +37,15 @@
 	<script type="text/javascript">
 	    var feed = new Instafeed({
 	        tagName: 'webdev',
-	        target: 'tabs-1',
+	        target: 'tab-1',
 	    });
 	    var wantedParking = new Instafeed({
 	        tagName: 'soccer',
-	        target: 'tabs-2',
+	        target: 'tab-2',
 	    });
 	    var availableParking = new Instafeed({
 	        tagName: 'worldcup',
-	        target: 'tabs-3',
+	        target: 'tab-3',
 	    });
 	    feed.run();
 	    wantedParking.run();
@@ -54,7 +54,9 @@
 	<script type="text/javascript">
 		$(document).ready(function ($) {
 		
-		    $('#tabs').tabulous();  
+		    $('#responsiveTabs').responsiveTabs({
+		        startCollapsed: 'accordion'
+		    });  
 		
 		});
 	</script>
@@ -186,24 +188,22 @@
 			<div id="live_feed" class="unit-100">
 				<h1>Recent Postings</h1>
 				
-				<div id="tabs">
+				<div id="responsiveTabs" class="r-tabs">
 				    <ul>
-				            <li><a href="#tabs-1" title="">All Posts</a></li>
-				            <li><a href="#tabs-2" title="">Available Parking</a></li>
-				            <li><a href="#tabs-3" title="">Wanted Parking</a></li>
-				        </ul>
-				        <div id="tabs_container">
-				            <div id="tabs-1">
-				                <!--tab content-->
-				                
+				                <li><a href="#tab-1">All Posts</a></li>
+				                <li><a href="#tab-2">Available Parking</a></li>
+				                <li><a href="#tab-3">Wanted Parking</a></li>
+				            </ul>
+				    
+				            <div id="tab-1">
+				            
 				            </div>
-				            <div id="tabs-2">
-				                   <!--tab content-->
+				            <div id="tab-2">
+				            
 				            </div>
-				            <div id="tabs-3">
-				                    <!--tab content-->
+				            <div id="tab-3">
+				            
 				            </div>
-				        </div><!--End tabs container--> 
 				  </div><!--End tabs-->
 				
 				<!--<div id="instagram_list">

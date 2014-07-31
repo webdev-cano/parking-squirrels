@@ -91,7 +91,7 @@ a.second_button{
 	font-family:'Open Sans Bold', sans-serif;
 	font-weight:normal;
 }
-span.ps_green{
+.ps_blue{
 	color: 											#56a0d3;
 }
 #live_feed{
@@ -102,12 +102,101 @@ span.ps_green{
 	font-size: 									1.6em;
 	text-align: 								center;
 }
-img{
-	width: 64px;
+
+/*Tabs*/
+.r-tabs {
+	position: relative;
 }
+
+.r-tabs .r-tabs-nav {
+	border-bottom: 1px solid #ccc;
+}
+
+.r-tabs .r-tabs-nav .r-tabs-tab {
+	position: relative;
+	top: 1px;
+}
+
+.r-tabs .r-tabs-nav .r-tabs-anchor {
+	background: #00aadd;
+	margin-bottom: 3px;
+	padding: 10px 12px;
+	display: inline-block;
+	text-decoration: none;
+	color: #fff;
+	font-weight: bold;
+}
+
+.r-tabs .r-tabs-nav .r-tabs-state-active {
+	background-color: #fff;
+	margin-bottom: -1px;
+	border-top: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+}
+
+.r-tabs .r-tabs-nav .r-tabs-state-disabled {
+	opacity: 0.5;
+}
+
+.r-tabs .r-tabs-nav .r-tabs-state-active .r-tabs-anchor {
+	color: #00aadd;
+	background-color: #fff;
+}
+
+.r-tabs .r-tabs-panel {
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	margin-bottom: 3px;
+}
+
+.r-tabs .r-tabs-accordion-title .r-tabs-anchor {
+	display: block;
+	padding: 10px;
+	background-color: #00aadd;
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+	margin-bottom: 3px;
+}
+
+.r-tabs .r-tabs-accordion-title.r-tabs-state-disabled {
+	opacity: 0.5;
+}
+
+.r-tabs .r-tabs-accordion-title.r-tabs-state-active .r-tabs-anchor {
+	background-color: #fff;
+	color: #00aadd;
+	border-top: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	margin-bottom: 0;
+}
+#tab-1 a img{
+	width: 											150px;
+	margin: 										0 15px 15px 0;
+}
+
 #post_pic {
 	float: 											left;
 }
+/* Modal Styles */
+#myModal h1{
+	font-size: 									1.6em;
+}
+#searchModal h1{
+	font-size: 									1.6em;
+	color: 											#F89406;
+}
+.btn{
+	background-color: 					#56a0d3;
+	color: 											#fff;
+}
+#searchModal .btn{
+	background-color: 						#F89406;
+}
+
 .footer{
 	background: #22313f url('http://www.actsofvolition.com/images/screenshots/background.png') no-repeat left top;
 	/*background-color: 					#22313f;*/
