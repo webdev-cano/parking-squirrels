@@ -14,15 +14,18 @@
 	<meta name="viewport" content="width=device-width">
 		
 	<!-- styles -->
-	<link rel="stylesheet" type="text/css" href="kube/css/kube.css">
+	<link rel="stylesheet" type="text/css" href="css/kube.css">
 	<link rel="stylesheet" href="http://builtbyhq.com/menu/css/reset.css">
-	<link rel="stylesheet" href="kube/css/main.css">
-	<link rel="stylesheet" href="kube/css/reveal.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/tabulous.css">
 	
 	<!-- js  -->
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-	<script src="kube/js/reveal/jquery.reveal.js" type="text/javascript"></script>
+	<script src="js/reveal/jquery.reveal.js" type="text/javascript"></script>
 	<script src="http://stickyjs.com/jquery.sticky.js" type="text/javascript"></script>
+	<script src="js/master.js"></script>
+	<script src="js/tabulous.js"></script>
 	<script type="text/javascript">
 	  $(window).load(function(){
 	    $(".top_nav").sticky({topSpacing:0});
@@ -30,6 +33,30 @@
 	</script>
 	<script type="text/javascript">
 		Parse.initialize("jMzYJcQbYgvPx7T7hXWZnfYlCu07YaErv3vVf8qu", "fstxxWXFbRDXoEm0KY46aGsMBqI1wH2NBsMPbJYn");
+	</script>
+	<script type="text/javascript">
+	    var feed = new Instafeed({
+	        tagName: 'webdev',
+	        target: 'tabs-1',
+	    });
+	    var wantedParking = new Instafeed({
+	        tagName: 'soccer',
+	        target: 'tabs-2',
+	    });
+	    var availableParking = new Instafeed({
+	        tagName: 'worldcup',
+	        target: 'tabs-3',
+	    });
+	    feed.run();
+	    wantedParking.run();
+	    availableParking.run();
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function ($) {
+		
+		    $('#tabs').tabulous();  
+		
+		});
 	</script>
 </head>
 
@@ -65,11 +92,15 @@
 			
 			</div>
 					<div id="myModal" class="reveal-modal">
-						<h1>Post a Parking Listing</h1>
+						<h1 class="ps_blue">Post a Parking Listing</h1>
 						<br />
 						<form onsubmit="myFunction(); return false;" method="post" action="" class="forms">
 						    <label>
-						        Name
+						        First Name
+						        <input type="text" name="user-name" class="width-50"  />
+						    </label>
+						    <label>
+						        Last Name
 						        <input type="text" name="user-name" class="width-50"  />
 						    </label>
 						    <fieldset>
@@ -94,14 +125,50 @@
 						</form>
 						<a class="close-reveal-modal">&#215;</a>
 					</div>
+					
+					<div id="searchModal" class="search-modal">
+						<h1>Post a Wanted Listing</h1>
+						<br />
+						<form onsubmit="myFunction(); return false;" method="post" action="" class="forms">
+						    <label>
+						        First Name
+						        <input type="text" name="user-name" class="width-50"  />
+						    </label>
+						    <label>
+						        Last Name
+						        <input type="text" name="user-name" class="width-50"  />
+						    </label>
+						    <fieldset>
+						        <label>
+						            Email
+						            <input type="email" name="user-email" class="width-50"  />
+						        </label>
+						        <label>
+						            Location
+						            <input type="password" name="user-password" class="width-50"  />
+						        </label>
+						    </fieldset>
+						    <fieldset>
+						        <legend>Details</legend>
+						        <label>
+						            <textarea name="user-about" class="width-100" rows="5"></textarea>
+						        </label>
+						    </fieldset>
+						    <p>
+						        <input type="submit" class="btn" value="Submit Wanted Listing" />
+						    </p>
+						</form>
+						<a class="close-reveal-modal">&#215;</a>
+					</div>
+					
 			<div class="units-row end">
 			
 				<div class="unit-100 banner">
 					<h1>Parking Squirrels is your hub for parking spots at UNC.</h1>
-					<h2>I would like to...</h2>
+					<h2>I am...</h2>
 					<div class="buttons">
-						<a href="#" class="post_parking big_link first_button" data-reveal-id="myModal">Post Parking Listing</a>
-						<a href="#" class="post_parking big_link second_button" data-reveal-id="myModal">Search Parking Listings</a>
+						<a href="#" class="post_parking big_link first_button" data-reveal-id="myModal">Selling a Parking Spot</a>
+						<a href="#" class="post_parking big_link second_button" data-reveal-id="searchModal">Looking for a Parking Spot</a>
 					</div>
 				</div>
 			
@@ -110,24 +177,37 @@
 			<div class="units-row about_section end">
 			
 				<div class="unit-100">
-					<h1>Parking Squirrels is a <span class="ps_green">FREE</span> platform<br /> to buy/rent/sell parking spots<br /> on college campuses.</h1>
+					<h1>Parking Squirrels is a <span class="ps_blue">FREE</span> platform<br /> to buy/rent/sell parking spots<br /> on college campuses.</h1>
 				</div>
 				
 			</div>
 			
 		<div class="units-row wrapper">
-		
 			<div id="live_feed" class="unit-100">
 				<h1>Recent Postings</h1>
-				<ul>
 				
-
-				<li><img src="images/post_placeholder.jpg" alt="post_pic" /></li>
-				<li><img src="images/post_placeholder.jpg" alt="post_pic" /></li>
-				<li><img src="images/post_placeholder.jpg" alt="post_pic" /></li>
-				<li><img src="images/post_placeholder.jpg" alt="post_pic" /></li>
+				<div id="tabs">
+				    <ul>
+				            <li><a href="#tabs-1" title="">All Posts</a></li>
+				            <li><a href="#tabs-2" title="">Available Parking</a></li>
+				            <li><a href="#tabs-3" title="">Wanted Parking</a></li>
+				        </ul>
+				        <div id="tabs_container">
+				            <div id="tabs-1">
+				                <!--tab content-->
+				                
+				            </div>
+				            <div id="tabs-2">
+				                   <!--tab content-->
+				            </div>
+				            <div id="tabs-3">
+				                    <!--tab content-->
+				            </div>
+				        </div><!--End tabs container--> 
+				  </div><!--End tabs-->
 				
-				</ul>
+				<!--<div id="instagram_list">
+				</div>-->
 			
 			</div>
 								
