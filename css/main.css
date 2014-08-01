@@ -245,3 +245,27 @@ a.second_button{
 	margin-left: 0;
 	margin-bottom: 10px;
 }
+
+@media only screen and (max-width: 767px) {
+	.banner{
+		padding: 					20px 10px 0 10px;
+		min-height: 			250px;
+	}
+	.banner h1{
+		font-size: 				1.4em;
+		margin-bottom: 		20px;
+	}
+	.banner h2{
+		margin-bottom: 		30px;
+	}
+	a.first_button,
+	a.second_button{
+		padding: 					10px;
+		font-size: 				1.2em;
+		display: 					block;
+	}		
+	a.first_button{
+		margin-right: 		0;
+		margin-bottom: 		10px;
+	}		
+}
