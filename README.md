@@ -5,4 +5,4 @@ Parking Squirrels is a hub for parking spots at UNC. It's is a FREE platform to 
 
 ## Usage
 
-This should not be used as it's not nearly completed yet.
+This should not be used as it's not completed yet. Completion Progress: 90%

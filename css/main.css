@@ -3,26 +3,6 @@
 	margin: 										0 auto;
 	width: 											100%;
 }
-.instagram_container{
-	max-width: 200px;
-	display: inline-block;
-	border: 1px solid #56a0d3;
-	height: 350px;
-	overflow: hidden;
-	margin-right: 15px;
-	-moz-box-shadow: 0 0 5px #000000;
-	box-shadow: 0 0 2px #000000;
-}
-.instagram_container a{
-	text-align: center;
-}
-a img.instagram_image{
-	display: block;
-	margin: 0 auto;
-}
-a img.owner_profile_picture{
-	width: 50px !important;
-}
 body{
 	font-family: 								Helvetica Neue;
 	font-weight: 								lighter;
@@ -35,10 +15,18 @@ body{
 	border-bottom: 							1px solid #333;
 	z-index: 10;
 }
-
+a.logo_text{
+	
+}
+.top_logo{
+	width: 56px;
+	float: left;
+	margin-left: 25px;
+}
 /* Banner */
 .banner{
-	background-color: 					#333;
+	background: 								#333 url(http://parkingsquirrels.com/images/congruent_outline.png) repeat;
+	background-size: 						150px 150px;
 	width: 											100%;
 	min-height: 								320px;
 	color: 											#fff;
@@ -61,6 +49,9 @@ body{
 .banner .buttons{
 	text-align: 								center;
 }
+img.menu_nav{
+	width: 											32px;
+}
 a.first_button,
 a.second_button{
 	padding: 										25px;
@@ -72,7 +63,7 @@ a.second_button{
 	text-decoration: 						none;
 }
 a.first_button{
-	background-color: 					#56a0d3;
+	background-color: 					#F89406;
 	margin-right: 							20px;
 }
 a.second_button{
@@ -92,16 +83,17 @@ a.second_button{
 	color: 											#777;
 }
 .navbar ul li a:hover{
-	color: 											#56a0d3;
+	color: 											#F89406;
 }
 .post_parking{
-	background-color: 					#56a0d3;
+	background-color: 					#F89406;
 	border: 										none;	
 	padding: 										4px;
 	color: #fff;
 }
 .about_section{
-	background-color: 					#f8f8f8;
+	background: 								#f8f8f8 url("http://parkingsquirrels.com/images/grey_@2X.png") repeat;
+	background-size: 						397px 322px;
 	width: 											100%;
 	padding: 										50px;
 }
@@ -112,8 +104,8 @@ a.second_button{
 	font-family:'Open Sans Bold', sans-serif;
 	font-weight:normal;
 }
-.ps_blue{
-	color: 											#56a0d3;
+.ps_orange{
+	color: 											#F89406;
 }
 #live_feed{
 	padding: 										50px 0;
@@ -123,6 +115,84 @@ a.second_button{
 	font-size: 									1.6em;
 	text-align: 								center;
 }
+
+/*Instafeed*/
+#instafeed{
+	text-align: left;
+}
+.instagram_container{
+	max-width: 200px;
+	overflow: auto;
+	overflow-x: hidden;
+	width: 100%;
+	margin-bottom: 25px;
+	float: left;
+	height: 370px;
+	margin-right: 15px;
+	-moz-box-shadow: 0 0 2px #000000;
+	box-shadow: 0 0 2px #000000;
+}
+.instagram_container a{
+	text-align: center;
+}
+.instagram_container:nth-child(4n + 0){
+	margin-right: 0;
+}
+/*.instagram_container:nth-child(3n + 0){
+	clear: both;
+}*/
+img.instagram_image{
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	vertical-align: middle;
+}
+#instafeed .instagram_image_meta .instagram_image_meta_item{
+	width: auto;
+	margin-right: 10px;
+}
+.instagram_image_meta_item.owner{
+	background-color: transparent;
+	display: inline-block;
+	float: right;
+	font-size: .8em;
+	text-align: right;
+	margin-top: 10px;
+}
+.instagram_image_meta_item.caption{
+	display: block;
+	clear: both;
+	background-color: transparent;
+	width: 100%;
+	text-align: left;
+	font-family: Interstate Light,sans-serif;
+	font-size: .9em;
+	margin: .5em;
+}
+img.owner_profile_picture{
+	width: 40px;
+	margin-top: -1px;
+}
+.instagram_image_meta_item.owner a{
+	color: #7a7a7a;
+	text-decoration: none;
+}
+.instagram_image_meta_item p{
+	margin: 0;
+	padding: 0 10px;
+	display: block;
+	-webkit-margin-before: 1em;
+	-webkit-margin-after: 1em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+}
+instagram_image_meta{
+	text-align: left;
+}
+.icon-bubble::before{
+	content:"\e002"
+}
+
 
 /*Tabs*/
 .r-tabs {
@@ -140,7 +210,7 @@ a.second_button{
 }
 
 .r-tabs .r-tabs-nav .r-tabs-anchor {
-	background: #00aadd;
+	background: #F89406;
 	margin-bottom: 3px;
 	padding: 10px 12px;
 	display: inline-block;
@@ -162,7 +232,7 @@ a.second_button{
 }
 
 .r-tabs .r-tabs-nav .r-tabs-state-active .r-tabs-anchor {
-	color: #00aadd;
+	color: #F89406;
 	background-color: #fff;
 }
 
@@ -176,7 +246,7 @@ a.second_button{
 .r-tabs .r-tabs-accordion-title .r-tabs-anchor {
 	display: block;
 	padding: 10px;
-	background-color: #00aadd;
+	background-color: #F89406;
 	color: #fff;
 	font-weight: bold;
 	text-decoration: none;
@@ -189,15 +259,11 @@ a.second_button{
 
 .r-tabs .r-tabs-accordion-title.r-tabs-state-active .r-tabs-anchor {
 	background-color: #fff;
-	color: #00aadd;
+	color: #F89406;
 	border-top: 1px solid #ccc;
 	border-right: 1px solid #ccc;
 	border-left: 1px solid #ccc;
 	margin-bottom: 0;
-}
-#tab-1 a img{
-	width: 											150px;
-	margin: 										0 15px 15px 0;
 }
 
 #post_pic {
@@ -212,13 +278,37 @@ a.second_button{
 	color: 											#F89406;
 }
 .btn{
-	background-color: 					#56a0d3;
+	background-color: 					#F89406;
 	color: 											#fff;
 }
 #searchModal .btn{
-	background-color: 						#F89406;
+	background-color: 					#F89406;
 }
-
+.it_worked{
+	display: 										none;
+	text-align: 								center;
+	font-size: 									2.2em;
+	z-index: 										999999999999999999999999999999999999999999;
+}
+.suggestions{
+	background-color: 					#EB974E;
+	width: 											100%;
+	padding: 										50px;
+	text-align: 								center;
+	color: 											#fff;
+}
+.suggestions h1{
+	color: 											#fff;
+}
+.suggestions a{
+	text-decoration: 						none;
+	color: 											#22313f;
+	line-height: 								1.6em;
+	font-size: 									2.3em;
+}
+.suggestions a:hover{
+	color: 											#fff;
+}
 .footer{
 	background: #22313f url('http://www.actsofvolition.com/images/screenshots/background.png') no-repeat left top;
 	/*background-color: 					#22313f;*/
@@ -228,20 +318,57 @@ a.second_button{
 .footer h2{
 	color: 											#fff;
 }
+.footer ul{
+	margin: 										0;
+}
 .footer ul li{
 	color: 											#fff;
 	line-height: 								1.6em;
+	list-style: 								none;
 }
 .footer a{
 	color: 											#fff;
 	text-decoration: 						none;
 }
 .footer a:hover{
-	color: 											#56a0d3;
+	color: 											#F89406;
+}
+.footer .logo{
+	width: 											200px;
 }
 .footer hr{
 	align: left;
 	width: 50%;
 	margin-left: 0;
 	margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 767px) {
+	.banner{
+		padding: 					20px 10px 0 10px;
+		min-height: 			250px;
+	}
+	.banner h1{
+		font-size: 				1.4em;
+		margin-bottom: 		20px;
+	}
+	.banner h2{
+		margin-bottom: 		30px;
+	}
+	a.first_button,
+	a.second_button{
+		padding: 					10px;
+		font-size: 				1.2em;
+		display: 					block;
+	}		
+	a.first_button{
+		margin-right: 		0;
+		margin-bottom: 		10px;
+	}
+	.suggestions h1{
+		font-size: 				1.6em;
+	}
+	.suggestions a{
+		font-size: 				1.4em;
+	}		
 }
