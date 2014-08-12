@@ -282,13 +282,7 @@ instagram_image_meta{
 	color: 											#fff;
 }
 #searchModal .btn{
-	background-color: 					#F89406;
-}
-.it_worked{
-	display: 										none;
-	text-align: 								center;
-	font-size: 									2.2em;
-	z-index: 										999999999999999999999999999999999999999999;
+	background-color: 						#F89406;
 }
 .suggestions{
 	background-color: 					#EB974E;
@@ -309,28 +303,6 @@ instagram_image_meta{
 .suggestions a:hover{
 	color: 											#fff;
 }
-<<<<<<< HEAD
-=======
-.suggestions{
-	background-color: 					#EB974E;
-	width: 											100%;
-	padding: 										50px;
-	text-align: 								center;
-	color: 											#fff;
-}
-.suggestions h1{
-	color: 											#fff;
-}
-.suggestions a{
-	text-decoration: 						none;
-	color: 											#22313f;
-	line-height: 								1.6em;
-	font-size: 									2.3em;
-}
-.suggestions a:hover{
-	color: 											#fff;
-}
->>>>>>> FETCH_HEAD
 .footer{
 	background: #22313f url('http://www.actsofvolition.com/images/screenshots/background.png') no-repeat left top;
 	/*background-color: 					#22313f;*/
